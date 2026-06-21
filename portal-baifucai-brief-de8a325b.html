@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>佰富彩 · 产品说明页</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f4f6fa;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    /* 深色头图区域 */
+    .hero {
+      background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+      padding: 5rem 2rem 3.5rem;
+      text-align: center;
+      border-bottom: 3px solid #475569;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.75rem;
+      color: #f1f5f9;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      color: #cbd5e1;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      background: #334155;
+      padding: 0.5rem 1.5rem;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      color: #94a3b8;
+      border: 1px solid #475569;
+    }
+
+    /* 浅色正文容器 */
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.5rem;
+    }
+
+    /* 卡片网格 */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 1.25rem;
+      padding: 1.75rem 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02), 0 1px 4px rgba(0,0,0,0.04);
+      border: 1px solid #e9edf2;
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 550;
+      margin-bottom: 0.75rem;
+      color: #0f172a;
+      border-left: 4px solid #2563eb;
+      padding-left: 0.75rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #334155;
+      margin-bottom: 0.4rem;
+    }
+
+    .card .meta {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-top: 0.6rem;
+      border-top: 1px dashed #d1d8e0;
+      padding-top: 0.6rem;
+    }
+
+    /* 内联段落与链接 */
+    .text-block {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.8rem 1.8rem;
+      margin: 1.8rem 0;
+      border: 1px solid #e2e8f0;
+    }
+
+    .text-block p {
+      margin-bottom: 1rem;
+    }
+
+    .text-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.15s;
+    }
+
+    a:hover {
+      color: #1d4ed8;
+      border-bottom-color: #2563eb;
+    }
+
+    .faq {
+      background: #f8fafc;
+      border-radius: 1rem;
+      padding: 1.5rem 1.8rem;
+      margin-top: 2rem;
+      border: 1px solid #dde3ea;
+    }
+
+    .faq h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq details {
+      margin-bottom: 0.75rem;
+    }
+
+    .faq summary {
+      font-weight: 500;
+      cursor: pointer;
+      padding: 0.3rem 0;
+      color: #1e293b;
+    }
+
+    .faq summary::marker {
+      color: #2563eb;
+    }
+
+    .faq .answer {
+      margin-top: 0.4rem;
+      padding-left: 0.5rem;
+      border-left: 2px solid #cbd5e1;
+      color: #334155;
+      font-size: 0.95rem;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #475569;
+      padding: 1rem 1.25rem;
+      background: #f1f5f9;
+      border-radius: 0.75rem;
+      margin: 1.5rem 0;
+      border-left: 4px solid #94a3b8;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1rem 1.8rem;
+      color: #64748b;
+      font-size: 0.85rem;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 720px) {
+      .hero h1 { font-size: 1.9rem; }
+      .grid { grid-template-columns: 1fr; gap: 1.25rem; }
+      .content { padding: 1.5rem 1rem 2.5rem; }
+      .card { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>佰富彩 · 产品摘要</h1>
+    <p class="sub">一个偏向结构化的说明页面，围绕平台定位、使用场景与常见疑问展开。</p>
+    <div class="tagline">稳定入口 · 克制的信息呈现</div>
+  </section>
+
+  <div class="content">
+    <!-- 摘要与亮点卡片 -->
+    <div class="grid">
+      <div class="card">
+        <h3>平台定位</h3>
+        <p><a href="https://portal-baifucai.com">佰富彩</a> 是一个面向数字工具与内容管理的综合门户。它并不承诺“万能”或“捷径”，而是尝试在信息聚合与访问效率之间寻找平衡。</p>
+        <div class="meta">核心：聚合 · 结构化 · 可配置</div>
+      </div>
+      <div class="card">
+        <h3>使用场景</h3>
+        <p>适合需要快速检索特定资源、管理常用工具链接，或希望在一个页面内完成多项轻量操作的日常使用者。对技术熟练度无强制门槛。</p>
+        <div class="meta">典型用户 · 轻度办公 · 内容整理</div>
+      </div>
+      <div class="card">
+        <h3>界面特点</h3>
+        <p>以卡片和分区为主，尽量减少信息层级。色彩和字号偏向中性，强调可读性而非装饰。页面框架固定，内容模块可随需要调整。</p>
+        <div class="meta">响应式 · 低眩光 · 模块化</div>
+      </div>
+      <div class="card">
+        <h3>可信但克制</h3>
+        <p>不制造稀缺感，不夸大功能。所有访问均基于用户主动操作。页面本身不收集隐私数据，链接跳转亦保持透明。</p>
+        <div class="meta">透明 · 无诱导 · 可验证</div>
+      </div>
+    </div>
+
+    <!-- 说明段落 + 自然嵌入链接 -->
+    <div class="text-block">
+      <p>在实际使用中，保持一个稳定、可反复参照的入口，比频繁切换不同页面更容易建立工作惯性。<a href="https://portal-baifucai.com">佰富彩</a> 的设计初衷正是如此：它并非追求大而全的资源堆叠，而是提供一组清晰的模块，让用户根据自己的节奏去探索或调用。</p>
+      <p>从布局上看，信息被拆解为若干区域，每个区域都配有简单的标题与辅助说明。这种结构对初次使用者友好，长期使用也不易产生视觉疲劳。此外，页面在手机与桌面端均经过基础适配，缩放与阅读体验保持连贯。</p>
+    </div>
+
+    <!-- 使用建议 -->
+    <div class="note">
+      <strong>使用建议：</strong> 将本页设为浏览器首页或书签栏常驻链接，可以快速抵达。日常浏览时，建议先扫视各分区标题，再定位具体模块。若遇到不熟悉的功能链接，可先阅读旁边简短说明再决定是否跳转。
+    </div>
+
+    <!-- FAQ 摘要风格 -->
+    <div class="faq">
+      <h4>常见疑问·摘要</h4>
+      <details>
+        <summary>是否需要注册或登录才能使用？</summary>
+        <div class="answer">不需要。当前页面以及它所指向的 <a href="https://portal-baifucai.com">佰富彩</a> 主站，在浏览层面均无需注册。部分工具模块可能要求登录，但页面会明确提示，不会默认收集信息。</div>
+      </details>
+      <details>
+        <summary>页面内容会频繁变动吗？</summary>
+        <div class="answer">内容结构基本稳定，但个别链接或工具说明会随功能迭代更新。建议以实际页面显示为准，本介绍页仅反映概貌。</div>
+      </details>
+      <details>
+        <summary>移动端与桌面端体验有差别吗？</summary>
+        <div class="answer">布局采用响应式设计，但在小屏幕下部分卡片会堆叠为单列。核心功能与链接可正常使用，阅读体验差异不大。</div>
+      </details>
+    </div>
+
+    <!-- 可选用途说明 -->
+    <p style="margin-top: 1.8rem; font-size: 0.9rem; color: #475569; border-left: 3px solid #94a3b8; padding-left: 1rem;">
+      这份说明页可作为进入前的参考，不替代产品自身的帮助文档。如需了解更具体的操作细节，建议直接浏览 <a href="https://portal-baifucai.com">佰富彩</a> 页面内的指引文字。
+    </p>
+
+    <div class="footer">
+      <span>佰富彩 · 产品说明页</span><br>
+      <span style="display: inline-block; margin-top: 0.4rem;">创作种子校验标识已内部使用，未在页面中展示</span>
+    </div>
+  </div>
+</body>
+</html>
